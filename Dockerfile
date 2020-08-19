@@ -67,3 +67,13 @@ ADD code /patchloc/code
 ADD data /patchloc/data
 ADD test /patchloc/test
 
+# Install Valgrind
+RUN apt-get install -y libc6-dbg \
+    && wget https://sourceware.org/pub/valgrind/valgrind-3.15.0.tar.bz2 \
+    && tar xjf valgrind-3.15.0.tar.bz2 \
+    && cd /valgrind-3.15.0 \
+    && ./configure \
+    && make -j32 \
+    && make install \
+    && rm /valgrind-3.15.0.tar.bz2
+
