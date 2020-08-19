@@ -59,7 +59,8 @@ RUN unzip iftracer.zip   \
     && cd ../ifLineTracer   \
     && sed -i 's/\/root\/workspace\/deps\/dynamorio\/build/\/dynamorio\/build/g' CMakeLists.txt \
     && cmake . \
-    && make -j32
+    && make -j32 \
+    && rm /iftracer.zip
 
 RUN mkdir /patchloc
 ADD code /patchloc/code
