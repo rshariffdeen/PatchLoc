@@ -61,3 +61,8 @@ RUN unzip iftracer.zip   \
     && cmake . \
     && make -j32
 
+RUN mkdir /patchloc
+ADD code /patchloc/code
+ADD data /patchloc/data
+ADD test /patchloc/test
+
