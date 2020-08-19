@@ -45,7 +45,7 @@ RUN git clone https://github.com/DynamoRIO/dynamorio.git  \
     && mkdir build \
     && cd build \
     && cmake .. \
-    && make -j32 \
+    && make -j32
 
 ADD code/iftracer.zip /iftracer.zip
 
