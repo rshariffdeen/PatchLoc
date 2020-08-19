@@ -43,8 +43,8 @@ RUN git clone https://github.com/DynamoRIO/dynamorio.git  \
     && cd ./dynamorio \
     && mkdir build \
     && cd build \
-    && cmake ..
-    && make - j32
+    && cmake .. \
+    && make - j32 \
     && cd ../../
 
 # Install the Dynamorio-based tracer
