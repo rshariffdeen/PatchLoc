@@ -2,7 +2,7 @@ FROM ubuntu:18.04
 MAINTAINER Ridwan <rshariffdeen@gmail.com>
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y && apt-get autoremove -y
-RUN sudo apt install -y \
+RUN apt install -y \
  build-essential \
  doxygen \
  ipython \
